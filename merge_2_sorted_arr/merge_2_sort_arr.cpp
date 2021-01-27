@@ -33,7 +33,6 @@ public:
 
 int main (){
     int i,n,m,el;
-    
     cin>>m;
     cin>>n;
     vector<int> nums1;
@@ -42,23 +41,11 @@ int main (){
         cin>>el;
         nums1.push_back(el);
     }
-    for (i=n+1;i<n+m;i++){
-        nums1.push_back(0);
-    }
     for (i=0;i<m;i++){
         cin>>el;
         nums2.push_back(el);
     }
-    for(int i=0;i<m;i++){
-    cout<<nums1[i]<<"  ";
-    }
-    cout<<endl<<"nums2"<<endl;
-    for(int i=0;i<n;i++){
-        cout<<nums2[i]<<"  ";
-    }
-    cout<<"sorting"<<endl;
     Solution sol;
     sol.merge(nums1,m,nums2,n);
-    // cout<<result;
     return 0;
 }
